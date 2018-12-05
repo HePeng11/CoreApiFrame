@@ -1,0 +1,111 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Jqgrid</title>
+    <link href="~/jqGrid/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/jqGrid/css/ui.jqgrid.css" rel="stylesheet" />
+    <script src="~/jqGrid/js/jquery-1.11.0.min.js"></script>
+    @*<link href="~/jqGrid/src/css/ui.jqgrid-bootstrap.css" rel="stylesheet" />*@
+    <script src="~/jqGrid/js/i18n/grid.locale-cn.js"></script>
+    <script src="~/jqGrid/js/jquery.jqGrid.min.js"></script>
+    <script src="~/jqGrid/src/grid.base.js"></script>
+    <script src="~/jqGrid/src/grid.treegrid.js"></script>
+</head>
+<body>
+
+    <table id="tree"></table>
+    <div id="pager1"></div>
+
+
+
+</body>
+
+</html>
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        jQuery('#tree').jqGrid({
+            url: "../src/data.json",
+            //treeGrid_bigData:true,
+            colModel: [
+                {
+                    "name": "category_id",
+                    "index": "accounts.account_id",
+                    "sorttype": "int",
+                    "key": true,
+                    "hidden": true,
+                    "width": 50
+                }, {
+                    "name": "name",
+                    "index": "name",
+                    "sorttype": "string",
+                    "label": "Name",
+                    "width": 170
+                }, {
+                    "name": "price",
+                    "index": "price",
+                    "sorttype": "numeric",
+                    "label": "Price",
+                    "width": 90,
+                    "align": "right"
+                }, {
+                    "name": "qty_onhand",
+                    "index": "qty_onhand",
+                    "sorttype": "int",
+                    "label": "Qty",
+                    "width": 90,
+                    "align": "right"
+                }, {
+                    "name": "color",
+                    "index": "color",
+                    "sorttype": "string",
+                    "label": "Color",
+                    "width": 100
+                }, {
+                    "name": "lft",
+                    "hidden": true
+                }, {
+                    "name": "rgt",
+                    "hidden": true
+                }, {
+                    "name": "level",
+                    "hidden": true
+                }, {
+                    "name": "uiicon",
+                    "hidden": true
+                }
+            ],
+            width: "780",
+            height: "auto",
+            sortname: "lft",
+            viewrecords: true,
+            treeGrid: true,
+            ExpandColumn: "name",
+            treedatatype: "json",
+            treeGridModel: "nested",
+            treeReader: {
+                "left_field": "lft",
+                "right_field": "rgt",
+                "level_field": "level",
+                "leaf_field": "isLeaf",
+                "expanded_field": "expanded",
+                "loaded": "loaded",
+                "icon_field": "icon"
+            },
+            sortorder: "asc",
+            datatype: "json",
+            pager: '#pager1',
+            rowNum: 20,
+            rowList: [15, 30, 60, 120],
+            subGrid: true
+        });
+    });
+
+</script>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreTest</name>
+    </assembly>
+    <members>
+        <member name="T:CoreTest.Controllers.UserController">
+            <summary>
+            user
+            </summary>
+        </member>
+        <member name="M:CoreTest.Controllers.UserController.Login(System.String,System.String)">
+            <summary>
+            返回一个字符串数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CoreTest.Controllers.ValuesController">
+            <summary>
+            API示例
+            </summary>
+        </member>
+        <member name="M:CoreTest.Controllers.ValuesController.Get">
+            <summary>
+            返回一个字符串数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoreTest.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            返回一个字符串
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoreTest.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CoreTest.Controllers.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            put
+            </summary>
+            <param name="id">ID</param>
+            <param name="value">VALUE</param>
+        </member>
+        <member name="M:CoreTest.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:CoreTest.Startup">
+            <summary>
+            启动类
+            </summary>
+        </member>
+        <member name="M:CoreTest.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:CoreTest.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CoreTest.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CoreTest.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

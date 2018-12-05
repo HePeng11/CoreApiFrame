@@ -1,0 +1,142 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "99c6b8383dc661e822ec30aa17499d0e7db2ac6c"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1.0",
+          "Microsoft.Extensions.Caching.Memory": "2.1.1.0",
+          "Microsoft.IdentityModel.Tokens": "5.2.0.0",
+          "System.IdentityModel.Tokens.Jwt": "5.2.0.0"
+        },
+        "runtime": {
+          "Common.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.1.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.1.1": {
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "System.Memory/4.5.1": {},
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.1.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/2.1.1.0": {
+        "runtime": {
+          "Microsoft.Extensions.Caching.Memory.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/5.2.0.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.50129"
+          }
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt/5.2.0.0": {
+        "runtime": {
+          "System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.50129"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Http.Features/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cMnTXRH+8T7GLht6cXRCMmN1HaYfXti2WEUdXqMUuyJgi4oH9cmzW4nECSBkQjsCs5O06BphyDDDAsTW/zQmpg==",
+      "path": "microsoft.aspnetcore.http.features/2.1.1",
+      "hashPath": "microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Svz25/egj1TsNL4118jyMqkhDiu0l8QYWq2p52P4BBN0GbqwR18ZRIctSP5TTDJy0m0EFC8aB2FOVjGtvEGWSA==",
+      "path": "microsoft.extensions.primitives/2.1.1",
+      "hashPath": "microsoft.extensions.primitives.2.1.1.nupkg.sha512"
+    },
+    "System.Memory/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vcG3/MbfpxznMkkkaAblJi7RHOmuP7kawQMhDgLSuA1tRpRQYsFSCTxRSINDUgn2QNn2jWeLxv8er5BXbyACkw==",
+      "path": "system.memory/4.5.1",
+      "hashPath": "system.memory.4.5.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.1.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Caching.Memory/2.1.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Tokens/5.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IdentityModel.Tokens.Jwt/5.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
