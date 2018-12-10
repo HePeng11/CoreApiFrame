@@ -16,3 +16,5 @@ E:\vstest\JqGridTest\JqGridTest\Common\obj\Debug\netcoreapp2.1\Common.csproj.Cop
 E:\vstest\JqGridTest\JqGridTest\Common\bin\Debug\netcoreapp2.1\Common.pdb
 E:\vstest\JqGridTest\JqGridTest\Common\obj\Debug\netcoreapp2.1\Common.dll
 E:\vstest\JqGridTest\JqGridTest\Common\obj\Debug\netcoreapp2.1\Common.pdb
+E:\vstest\JqGridTest\JqGridTest\Common\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.dll
+E:\vstest\JqGridTest\JqGridTest\Common\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.xml

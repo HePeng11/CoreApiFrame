@@ -10,7 +10,7 @@ namespace CoreTest.Controllers
     /// <summary>
     /// API示例
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     [Authorize(Roles = "Admin,hepeng")]//or [Authorize(Policy="RequireAdmin")]
     public class ValuesController : ControllerBase

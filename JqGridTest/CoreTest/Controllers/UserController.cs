@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Common.Jwt;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,8 +13,9 @@ namespace CoreTest.Controllers
     /// <summary>
     /// user
     /// </summary>
-    [Route("api/user")]
+    [Route("user")]
     [ApiController]
+    [EnableCors("Any")]
     public class UserController : Controller
     {
         /// <summary>

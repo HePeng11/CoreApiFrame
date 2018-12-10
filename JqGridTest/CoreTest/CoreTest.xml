@@ -71,6 +71,7 @@
         <member name="M:CoreTest.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             This method gets called by the runtime. Use this method to add services to the container.
+            第一次请求时配置各个实例对象（bean）
             </summary>
             <param name="services"></param>
         </member>

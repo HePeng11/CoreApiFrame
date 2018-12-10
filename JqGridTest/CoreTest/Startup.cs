@@ -4,11 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 using Common.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -48,6 +50,7 @@ namespace CoreTest
 
         /// <summary>
         /// This method gets called by the runtime. Use this method to add services to the container.
+        /// 第一次请求时配置各个实例对象（bean）
         /// </summary>
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
@@ -55,7 +58,14 @@ namespace CoreTest
             services.AddMvc().AddJsonOptions(o =>
             {
                 o.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.Configure<MvcOptions>(options =>
+            {
+                //给全局路由添加统一前缀
+                options.Conventions.Insert(0, new RouteConvention(new RouteAttribute("services/v1/")));
+            });
 
             #region swagger
             services.AddSwaggerGen(c =>
@@ -65,7 +75,7 @@ namespace CoreTest
                 {
                     Version = "v1.0.0",
                     Title = "hepeng's dotnetcore test",
-                    Description = "路漫漫其修远兮，愿归来仍是少年",
+                    Description = "路漫漫其修远兮 吾将上下而求索<br />愿你出走半生 归来仍是少年",
                     TermsOfService = "http://www.baidu.com",
                     License = new License() { Name = "license", Url = "http://www.baidu.com" },
                     Contact = new Contact() { Name = "hepeng", Email = "914535402@qq.com", Url = "https://www.cnblogs.com/hepeng/" }
@@ -133,9 +143,12 @@ namespace CoreTest
             #endregion
 
             #region CORS 启用跨域请求
+            //同源三要素: 协议 域名 端口  不同的资源的这三个要素同时相同才叫同源
+            //https://i.cnblogs.com/EditLinks.aspx?catid=1357952
             services.AddCors(c =>
             {
                 //添加策略
+                //此处与控制器中的[EnableCors("Any")]对应
                 c.AddPolicy("Any", policy =>
                 {
                     policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials();

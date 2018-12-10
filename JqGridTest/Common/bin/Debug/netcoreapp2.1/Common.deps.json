@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "2.1.1",
           "Microsoft.AspNetCore.Http.Abstractions": "2.1.1.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.1.1.0",
           "Microsoft.Extensions.Caching.Memory": "2.1.1.0",
           "Microsoft.IdentityModel.Tokens": "5.2.0.0",
           "System.IdentityModel.Tokens.Jwt": "5.2.0.0"
@@ -53,6 +54,14 @@
       "Microsoft.AspNetCore.Http.Abstractions/2.1.1.0": {
         "runtime": {
           "Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Core/2.1.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.Core.dll": {
             "assemblyVersion": "2.1.1.0",
             "fileVersion": "2.1.1.18157"
           }
@@ -119,6 +128,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.1.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Core/2.1.1.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
